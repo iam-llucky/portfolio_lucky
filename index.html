@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aditya Raj Burman - Portfolio</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://i.gyazo.com/a524e8e6b4ae292ad97d2f6e1638a44e.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://i.gyazo.com/4cf2df3e2c62b3e74c5c78298da89db6.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://i.gyazo.com/d0cceadce068fd7a2b97f7635a1d6aed.png">
+<link rel="manifest" href="/site.webmanifest">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font: 400 15px/1.8 "Lato", sans-serif;
+      color: #ffffff;
+      padding-top: 20px;
+      transition: opacity 1s;
+      position:relative;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      z-index: 1000; 
+      border-bottom: 1px solid white;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #ffffff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background: #ddd;
+      color: rgb(85, 84, 84);
+    }
+   @media only screen and (max-width:749px) {
+  .parallax {
+    background-attachment: scroll;
+     background-size: 100% 100%;
+   }
+}
+ @media screen and (max-width: 600px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-evenly ;
+      }
+      
+    }
+
+    .bgimg-1, .bgimg-2, .bgimg-3 , .bgimg-4{
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.97;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bgimg-1 {
+      background-image: url("https://images.pexels.com/photos/7840299/pexels-photo-7840299.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      min-height: 100vh;
+    }
+
+    .bgimg-2 {
+      background-image: url("https://images.pexels.com/photos/12694927/pexels-photo-12694927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      min-height: 800px;
+    }
+
+    .bgimg-3 {
+      background-image: url("https://images.pexels.com/photos/12282882/pexels-photo-12282882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      min-height: 800px;
+    }
+
+    .bgimg-4 {
+      background-image: url("https://images.pexels.com/photos/21389776/pexels-photo-21389776/free-photo-of-misty-morning.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      min-height: 800px;
+    }
+
+    .caption {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      color: #000;
+    }
+
+    .caption span.border {
+      background-color: #111;
+      color: #fff;
+      padding: 18px;
+      font-size: 25px;
+      letter-spacing: 12px;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    h2 {
+      background-color: #ffffff transparent;
+      color: #444444;
+      padding: 18px;
+      font-size: 25px;
+      letter-spacing: 10px;
+    }
+
+    h3 {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font: 20px "Lato", sans-serif;
+      color: #111;
+    }
+
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+    }
+
+    a.no-underline {
+      text-decoration: none;
+    }
+
+    /* Added styles for education boxes */
+    .education-box {
+      padding: 10px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      margin-right: 20px;
+      transition: transform 0.1s, padding 0.3s;
+
+    }
+
+    .education-box:hover {
+      transform: scale(1.05);
+      padding: 25px;
+      background-color: aliceblue;
+ 
+    } .fixed-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .play-button, .pause-button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .play-button:hover, .pause-button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+<header> <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#service">Services</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills/ Certifications</a> 
+    <a href="#portfolio">Resume</a> 
+    <a href="#contact">Contact Me</a>
+  </div>
+
+</header>
+
+
+
+<div class="bgimg-1" id="home">
+  <div class="caption">
+    <span class="border">
+      <a href="https://www.linkedin.com/in/aditya-raj-burman-a95a92229/" class="no-underline"> Aditya Raj Burman </a>
+    </span>
+  </div>
+</div>
+
+<div id="about" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h2>Aditya Raj Burman</h2>
+  <p style="font-size: 25px;">Hello, I'm Aditya Raj Burman from Jabalpur. Experienced with extensive use of web technologies and adapted to the latest industry ideas for the new day IT sector. I keep seeking for Internship opportunities around me to enhance my technical skills, as well as to contribute to various IT Industries which is beneficial for both of us.</p>
+  <br>
+  <div style="display: flex;align-items: center; justify-content: space-evenly;font-size: 20px;">
+    <p>Email: adityarajburman2003@gmail.com </p>
+    <p> Age: 21 </p>
+    <p>Degree : B.Tech (CSE) </p>
+    <p> Location : Jabalpur</p>
+    <p>My Résumé : <a style="color: #777;" class="no-underline" href="https://drive.google.com/uc?export=download&id=1RG6HWxxnJfC8AMEm9DUdnNMf6-KRfIhb">Click Here</a></p>
+  </div>
+</div>
+
+<div class="bgimg-3" id="service" >
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">I AM</span><br>
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> <div style="font-size: 35px;" id="changing-text"> </div></span><br><br> 
+  </div>
+</div>
+
+<div id="education">
+  <div style="color:#000000;background-color:#ffffff;text-align:center;padding:50px 80px;text-align: justify;height:400px;">
+    <h2>Education</h2>
+    <div style="display:flex;justify-content:center;">
+      <div class="education-box">
+        <h3>12th CBSE</h3>
+        <p style="font-style:italic;">St. Gabriel Sr. Sec. School, Ranjhi</p>
+        <p>Percentage: 74%</p>
+      </div></a>
+      <div class="education-box">
+        <h3>10th CBSE</h3>
+        <p style="font-style:italic;">St. Gabriel Sr. Sec. School, Ranjhi</p>
+        <p>Percentage: 84%</p>
+      </div>
+      <div class="education-box">
+        <h3>B. Tech</h3>
+        <p style="font-style:italic;">Baderia Global Institute of Management and Technology</p>
+        <p>CGPA: 7.4 (Still Pursuing 3rd Year)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bgimg-2" id="projects">
+  <span class="border">
+    <a href="https://github.com/iam-llucky" class="no-underline"> Project Upload is in Progress, Stay tuned. </a>
+  </span>
+</div>
+
+<div id="skills">
+  <div style="color:#000000;background-color:#ffffff;text-align:center;padding:50px 80px;text-align: justify;">
+    <p><h2  >Skills</h2></p>
+    <p>- <i>Programming languages</i>: JavaScript, Java, C, C++</p>
+    <p>- <i>Web Technologies</i>: HTML, CSS</p> 
+    <p>- <i>Interests</i>: Git, Subversion</p>
+    <p>- <i>Softwares</i>: Canva, Wordpress, Audacity, Flv</p>
+    <p><h2>Certifications</h2></p>
+    <p>- Cisco Netcad</p>
+    <p>- Coursera</p>
+  </div>
+</div>
+
+<div class="bgimg-4" id="portfolio">
+  <div class="caption">
+    <span class="border"><a class="no-underline" href="https://drive.google.com/uc?export=download&id=1RG6HWxxnJfC8AMEm9DUdnNMf6-KRfIhb">My Resume</a></span>
+  </div>
+</div>
+
+<footer id="contact" style="background-color: #14222f; color: #fff; padding: 20px; text-align: center; margin-top: 1px;">
+  <div >
+    <h2 style="color: aliceblue;">Contact Information</h2>
+    <p>Email: adityarajburman2003@gmail.com</p>
+    <p>LinkedIn:<a href="https://www.linkedin.com/in/aditya-raj-burman-a95a92229/" class="no-underline"> Aditya Raj Burman</a></p>
+    <p>Location: Jabalpur, India</p>
+  </div>
+  <div>
+    <h2 style="color: aliceblue;">Follow Me</h2>
+    <a href="https://www.facebook.com/lucky.burman.372/" style="color: #fff; margin-right: 10px;">Facebook</a>
+    <a href="https://twitter.com/iam_llucky" style="color: #fff; margin-right: 10px;">Twitter</a><br>
+    <a href="https://discord.com/users/iamllucky" style="color: #fff; margin-right: 10px;">Discord</a>
+    <a href="https://linktr.ee/iam.llucky" style="color: #fff; margin-right: 10px;">Linktree</a>
+  </div>
+  <div>
+    <p>&copy; 2024 <a href="https://www.linkedin.com/in/aditya-raj-burman-a95a92229/" class="no-underline">Aditya Raj Burman.</a>All Rights Reserved.</p>
+    <p><a href="https://drive.google.com/uc?export=download&id=14wixoKOlUHBLntwsbpXww4nJSZTDBQID" class="no-underline">Credits and Copyrights. </a></p>
+    <h2><a href="#home">Back to Top</a></h2>
+  </div>
+</footer>
+ 
+<script>
+  const textArray = ["Developer","Designer" , "Programmer",   "Editor", "Learner"  ];
+  let currentIndex = 0;
+
+  function changeText() {
+    $("#changing-text").fadeOut(function () {
+      $(this).text(textArray[currentIndex]).fadeIn();
+    });
+
+    currentIndex++;
+    if (currentIndex >= textArray.length) {
+      currentIndex = 0;
+    }
+  }
+
+  setInterval(changeText, 1000);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  (function() {
+    const sections = ["service", "projects", "portfolio" , "home"];
+
+    sections.forEach(section => {
+      const elem = document.querySelector(`#${section}`);
+      document.addEventListener("mousemove", (e) => {
+        parallax(e, elem);
+      });
+    });
+
+    function parallax(e, elem) {
+      let _w = window.innerWidth / 2;
+      let _h = window.innerHeight / 2;
+      let _mouseX = e.clientX;
+      let _mouseY = e.clientY;
+      let _depth1 = `${50 - (_mouseX - _w) * 0.1}% ${50 - (_mouseY - _h) * 0.01}%`;
+      let _depth2 = `${50 - (_mouseX - _w) * 0.2}% ${50 - (_mouseY - _h) * 0.02}%`;
+      let _depth3 = `${50 - (_mouseX - _w) * 0.6}% ${50 - (_mouseY - _h) * 0.06}%`;
+      let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+      elem.style.backgroundPosition = x;
+    }
+  })();
+ 
+</script>
+
+</body>
+</html>
